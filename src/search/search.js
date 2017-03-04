@@ -1,3 +1,4 @@
+'use strict';
 myk.controller("search", function($scope) {
 	$scope.testValue = "Welcome to MyKenpo!"
 });

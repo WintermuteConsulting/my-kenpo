@@ -2,12 +2,14 @@
 <html>
 <head>
 <script src="/angular/angular.js"></script>
+<script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="/kenpo-app.js"></script>
 <script src="/search/search.js"></script>
+<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
 <body>
-<div ng-app="my-kenpo" ng-controller="search">
-	<search-form/>
+<div ng-app="my-kenpo">
+	<div ui-view></div>
 </div>
 </body>
 </html>
