@@ -9,6 +9,10 @@ myk.config(function($stateProvider, $urlRouterProvider) {
 			url: '/search',
 			templateUrl: '/search/search.html'
 		})
+		.state('result', {
+			url: '/result',
+			templateUrl: '/result/result.html'
+		})
 		.state('about', {
 			url: '/about',
 			templateUrl: '/about/about.html'
