@@ -6,10 +6,23 @@
 <script src="/kenpo-app.js"></script>
 <script src="/search/search.js"></script>
 <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/stylesheets/style.css"/>
+<link rel="stylesheet" href="/stylesheets/cover.css"/>
+
 </head>
 <body>
-<div ng-app="my-kenpo">
-	<div ui-view></div>
+<div class="site-wrapper">
+<div class="site-wrapper-inner">
+<div class="cover-container">
+		<div ng-app="my-kenpo">
+			<div ui-view></div>
+		</div>
+
+<div class="mastfoot">
+ <div class="inner">
+ <p> Copyright &copy;&nbsp;2017 Wintermute Consulting</p>
+ </div>
+ </div>
 </div>
 </body>
 </html>

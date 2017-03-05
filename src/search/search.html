@@ -1,5 +1,19 @@
 <div ng-controller="search">
-<img src="/images/universal.png"/>
-<br/>
-<span>{{testValue}}</span>
+
+
+<div class="inner cover">
+
+<p class="lead">
+<img id="search-logo" src="/images/universal.png"/>
+</p>
+<p class="lead">
+Search for Kenpo Techniques
+</p>
+<p class="lead">
+<form>
+	<input type="text" ng-model="searchQuery" required="string"/>
+	<a href="#" class="btn btn-sm btn-default">Search</a>
+</form>
+</p>
+</div>
 </div>
