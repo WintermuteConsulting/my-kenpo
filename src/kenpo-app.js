@@ -1,5 +1,5 @@
 'use strict';
-var myk = angular.module('my-kenpo', ['ui.router']);
+var myk = angular.module('my-kenpo', ['ui.router', 'ui.grid']);
 
 myk.config(function($stateProvider, $urlRouterProvider) { 
 	$urlRouterProvider.otherwise('/search');
