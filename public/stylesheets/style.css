@@ -15,3 +15,12 @@ a {
 	height: 600px;
 	display: inline-block;
 }
+
+
+.techniques {
+	width: 100%;
+	color: #000;
+	background-color:#9c9c9c;
+	text-align: left;
+
+}

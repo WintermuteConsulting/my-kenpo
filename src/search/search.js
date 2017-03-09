@@ -1,12 +1,14 @@
-'use strict';
-myk.controller("search", function($scope) {
-	$scope.testValue = "Welcome to MyKenpo!"
-});
+module.exports = function(myk) {
 
-myk.directive("searchForm", function() {
-	return {
-		templateUrl: "/search/search.html"
+	myk.controller("search", function($scope) {
+		$scope.testValue = "Welcome to MyKenpo!"
+	});
 
-	};
+	myk.directive("searchForm", function() {
+		return {
+			templateUrl: "/search/search.html"
 
-});
+		};
+
+	});
+}

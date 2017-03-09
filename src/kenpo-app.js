@@ -1,20 +1,7 @@
-'use strict';
-var myk = angular.module('my-kenpo', ['ui.router', 'ui.grid']);
+var angular = require('angular');
+var myk = angular.module('my-kenpo', ['ui.router']);
 
-myk.config(function($stateProvider, $urlRouterProvider) { 
-	$urlRouterProvider.otherwise('/search');
+require('./config/routes.js')(myk);
+require('./search/search.js')(myk);
+require('./result/result.js')(myk);
 
-	$stateProvider
-		.state('search', {
-			url: '/search',
-			templateUrl: '/search/search.html'
-		})
-		.state('result', {
-			url: '/result',
-			templateUrl: '/result/result.html'
-		})
-		.state('about', {
-			url: '/about',
-			templateUrl: '/about/about.html'
-		});
-});
