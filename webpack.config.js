@@ -1,16 +1,16 @@
-
-var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-	entry: {
-		'app': './src/kenpo-app.js'
-	
-	},
-	output: {
-		path: path.join(__dirname, 'dist'),
-		publicPath: '/dist/',
-        filename: '[name].bundle.js',
-        library: 'myk',
-      	libraryTarget: 'var'
-	}
-}
+		context: __dirname + '/src',
+		entry: {
+			app: './kenpo-app.js',
+			vendor: ['angular', 'angular-ui-router']
+		},
+		output: {
+			path: __dirname + '/dist',
+			filename: '[name].bundle.js'
+		},
+		plugins: [
+			new webpack.optimize.CommonsChunkPlugin("vendor")
+		]
+};

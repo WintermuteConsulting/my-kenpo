@@ -3,18 +3,9 @@
  <h2>Kenpo Self-Defense Techniques</h2>
 
 	<div class="techniques">
-
-		<div class="row">
-			<div class="col-md-1">
-				<h4>Clutching Feathers</h4>
-
-			</div>
-
-			<div class="col-md-1">
-				<h4>Clutching Feathers</h4>
-			</div>
-
-
+		<ul>
+      <li ng-repeat="technique in techniques">{{technique.name}}</li>
+    </ul>
 		</div>
 	</div>
 
