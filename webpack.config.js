@@ -4,7 +4,10 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
 		context: __dirname + '/src',
 		entry: {
-			app: './kenpo-app.js',
+			app: ['./kenpo-app.js',
+			      './config/routes.js',
+			      './search/search.js',
+						'./result/result.js'],
 			vendor: ['angular', 'angular-ui-router']
 		},
 		output: {
@@ -15,33 +18,31 @@ module.exports = {
 			new webpack.optimize.CommonsChunkPlugin("vendor"),
 			new CopyWebpackPlugin(
 			[
-			// 		{ from: './*.html' },
-			// 		{ from: __dirname + '/src/search/*.html' },
-			// 		{ from: __dirname + '/src/result/*.html' },
-			// 		{ from: __dirname + '/src/about/*.html' },
-			// 		{ from: __dirname + '/src/about/*.html' },
-			  		{ from: __dirname + '/node_modules/bootstrap/dist/css/bootstrap.min.css' }
+  			{ from: __dirname + '/node_modules/bootstrap/dist/css/bootstrap.min.css' }
 			])
 		],
 		module: {
 			rules: [
-  			{
-					test: /\.(js|jsx)$/,
-					use: 'babel-loader'
-				},
+				{
+		      test: /\.js$/,
+		      exclude: /(node_modules)/,
+		      use: {
+		        loader: 'babel-loader',
+		      }
+		    },
 				{
 						test: /\.css$/,
 						use: [ 'style-loader', 'css-loader' ]
 				},
 				{
 					test: /\.html$/,
-					loader: 'file-loader'
+					use: 'file-loader'
 				}
 			],
 			loaders: [
 				{
 	  			test: /\.(jpe?g|png|gif|svg)$/i,
-			  	loader:'file-loader'
+			  	loader:'url-loader'
 				}
 			]
  		}

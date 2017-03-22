@@ -1,6 +1,4 @@
-'use strict';
-
-var angular = require('angular');
+const angular = require('angular');
 
 angular.module('my-kenpo').config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/search');
