@@ -11,7 +11,8 @@ module.exports = {
 						'./index.html',
 						'./about/about.html',
 					  './search/search.html',
-					  './result/result.html'],
+					  './result/result.html'
+			],
 			vendor: ['angular', 'angular-ui-router']
 		},
 		output: {
@@ -31,22 +32,27 @@ module.exports = {
 		      test: /\.js$/,
 		      exclude: /(node_modules)/,
 		      use: {
-		        loader: 'babel-loader',
+		        loader: 'babel-loader'
 		      }
 		    },
 				{
-						test: /\.css$/,
-						use: [ 'style-loader', 'css-loader' ]
+					test: /\.css$/,
+					use: [ 'style-loader', 'css-loader' ]
 				},
 				{
 					test: /\.html$/,
-					use: 'file-loader?name=[name].[ext]'
+					use: ['file-loader?name=[path]/[name].[ext]', 'extract-loader', 'html-loader'],
+					exclude: /index.html/
+				},
+				{
+					test: /\index.html$/,
+					use: 'file-loader?name=[name].[ext]',
 				}
 			],
 			loaders: [
 				{
-	  			test: /\.(jpe?g|png|gif|svg)$/i,
-			  	loader:'url-loader'
+	  			test: /.png$/,
+			  	loader:'url-loader?mimetype=image/png'
 				}
 			]
  		}

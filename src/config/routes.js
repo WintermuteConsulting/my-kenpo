@@ -6,14 +6,14 @@ angular.module('my-kenpo').config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 		.state('search', {
 			url: '/search',
-			templateUrl: 'search.html'
+			templateUrl: '/search/search.html'
 		})
 		.state('result', {
 			url: '/result',
-			templateUrl: 'result.html'
+			templateUrl: '/result/result.html'
 		})
 		.state('about', {
 			url: '/about',
-			templateUrl: 'about.html'
+			templateUrl: '/about/about.html'
 		});
 });
