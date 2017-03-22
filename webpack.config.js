@@ -7,7 +7,11 @@ module.exports = {
 			app: ['./kenpo-app.js',
 			      './config/routes.js',
 			      './search/search.js',
-						'./result/result.js'],
+						'./result/result.js',
+						'./index.html',
+						'./about/about.html',
+					  './search/search.html',
+					  './result/result.html'],
 			vendor: ['angular', 'angular-ui-router']
 		},
 		output: {
@@ -36,7 +40,7 @@ module.exports = {
 				},
 				{
 					test: /\.html$/,
-					use: 'file-loader'
+					use: 'file-loader?name=[name].[ext]'
 				}
 			],
 			loaders: [
