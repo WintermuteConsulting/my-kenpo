@@ -52,7 +52,7 @@ module.exports = {
 			loaders: [
 				{
 	  			test: /.png$/,
-			  	loader:'url-loader?mimetype=image/png'
+			  	loader: 'file-loader'
 				}
 			]
  		}
