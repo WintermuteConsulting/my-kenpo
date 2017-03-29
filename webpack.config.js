@@ -40,6 +40,10 @@ module.exports = {
 					use: [ 'style-loader', 'css-loader' ]
 				},
 				{
+					test: /\.scss$/,
+					loader: 'style-loader!css-loader!sass-loader'
+				},
+				{
 					test: /\.html$/,
 					use: ['file-loader?name=[path]/[name].[ext]', 'extract-loader', 'html-loader'],
 					exclude: /index.html/

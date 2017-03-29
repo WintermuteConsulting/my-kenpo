@@ -1,6 +1,9 @@
+$backgroundColor: #000;
+$techniquesBackgroundColor: #9c9c9c;
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #000;
+  background-color: $backgroundColor;
 }
 
 a {
@@ -8,19 +11,13 @@ a {
 }
 
 #search-logo {
+  max-width: 20em;
 }
-
-.resultGrid {
-	width: 500px;
-	height: 600px;
-	display: inline-block;
-}
-
 
 .techniques {
 	width: 100%;
 	color: #000;
-	background-color:#9c9c9c;
+	background-color: $techniquesBackgroundColor;
 	text-align: left;
 
 }
